@@ -1,0 +1,326 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+}
+
+/* navigation */
+
+nav{
+    background: black;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+
+
+label.logo{
+    color: palevioletred;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: palevioletred;
+    transition: 0.5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#618685;
+        top: 80px;
+        left:-100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: palevioletred;  
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/* navigation ends*/
+
+/* home section */
+section{
+/* background: url(./images/bgimage.jpg) no-repeat;
+    background-size: cover;
+    */
+    background-color: #eeeeee;
+    height: calc(100vh - 80px);
+}
+
+.flex-con{
+    display:inline-flex;
+    margin: 40px;
+}
+
+.row-1{
+    display: fixed;
+    padding: 40px 50px;
+}
+.con-1 {
+    font-size: 1.5vw;
+    word-spacing: normal;
+    display: block;
+    height: 100%;
+    align-items: center;
+    margin: 300px 10px;
+    padding: 0px 20px;
+    color: black;
+}
+
+.row-1 img{
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+    box-shadow: .7rem .7rem pink;
+}
+
+@media screen and (max-width: 500px) {
+    .responsive{
+        padding: 0px 20px;
+    }  
+}
+/* home section  ends*/
+
+/* about section */
+.headinga{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.row-2 img{
+    width: 500px;
+    height: 600px;
+    display: fixed;
+    margin-top: 120px;
+    margin-right: 200px;
+    float: right;
+    border-radius: 10%;
+    box-shadow: .7rem .7rem pink;
+}
+
+.fonts{
+    padding: 10px 0px 0px 10%;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* about section  ends*/
+
+/* hobbies section */
+.headingb{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    font-size: 3rem;
+}
+.s3 .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+}
+
+.s3 .box-container .box{
+    flex: 1 1 30rem;
+    text-align: center;
+    padding: 2rem;
+    background: pink;
+    border-radius: .5rem;
+    box-shadow: .5rem 1rem rgba(0,0,0,.1);
+
+}
+
+.s3 .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    color: palevioletred;
+    background: black;
+    border-radius: 50%;
+}
+
+.s3 .box-container .box h3{
+    color: black;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+/* hobbies section  ends*/
+
+/* education section */
+.headingc{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    font-size: 2.5rem;
+}
+.s4 .box-container1{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+}
+
+.s4 .box-container1 .box1{
+    flex: 1 1 30rem;
+    text-align: center;
+    width: 500px;
+    padding: 2rem;
+    background: pink;
+    border-radius: .5rem;
+    box-shadow: .5rem 1rem rgba(0,0,0,.1);
+
+}
+
+.s4 .box-container1 .box1 h2{
+    color: black;
+    font-size: 1.8rem;
+    padding-top: 1rem;
+}
+/* education section ends*/
+
+/* contact section*/
+.headingd{
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 250px;
+    font-size: 2rem;
+}
+
+.contacts{
+    font-size: 70px;
+    float: left;
+    padding-left: 10%;
+    padding-top: 1%;
+    margin-top: 20px;
+    vertical-align: baseline;  
+}
+
+.a{
+    font-size: 30px;
+    float: right;
+    padding-top:20px;
+    bottom: 100px;   
+}
+
+.b{
+    font-size: 30px;
+    float: right;
+    padding-top:20px;
+    padding-right: 80px;
+    bottom: 100px;   
+}
+
+.c{
+    font-size: 30px;
+    float: right;
+    padding-top:20px;
+    padding-right: 160px;
+    bottom: 100px;   
+}
+
+.d{
+    font-size: 30px;
+    float: right;
+    padding-top:20px;
+    padding-right: 150px;
+    bottom: 100px;   
+}
+
+.e{
+    font-size: 30px;
+    float: right;
+    padding-top:20px;
+    padding-right: 380px;
+    bottom: 100px;   
+}
+
+/* contact section ends*/
+
+.button{
+    background-color: palevioletred;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
